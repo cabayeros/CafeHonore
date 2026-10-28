@@ -1,0 +1,74 @@
+:root {
+  color-scheme: light;
+  /* Design tokens: Marca +PLUS y escalera cálida de superficies. */
+  --color-primary: #b82940;
+  --color-on-primary: #ffffff;
+  --color-primary-hover: #982035;
+  --color-primary-soft: #f4e8e8;
+  --color-secondary: #16466b;
+  --color-surface: #f7f6f3;
+  --color-surface-low: #f1efec;
+  --color-surface-container: #ebe8e4;
+  --color-surface-high: #e5e2de;
+  --color-surface-highest: #dcd9d5;
+  --color-surface-raised: #ffffff;
+  --color-on-surface: #262a30;
+  --color-on-surface-variant: #686d75;
+  --color-outline: #686d75;
+  --color-outline-variant: #c5c4c1;
+  --color-error: #a51f35;
+  --color-focus: #16466b;
+  --color-image-overlay: rgb(0 0 0 / 80%);
+  --color-control-overlay: rgb(23 26 31 / 78%);
+  --color-control-overlay-hover: rgb(23 26 31 / 92%);
+  --color-logo-surface: #ffffff;
+  --color-image-text: #ffffff;
+  --border-subtle: color-mix(in srgb, var(--color-outline-variant) 20%, transparent);
+  --border-section: color-mix(in srgb, var(--color-outline-variant) 30%, transparent);
+  --border-input: color-mix(in srgb, var(--color-outline-variant) 50%, transparent);
+  --font-sans: 'Segoe UI', Arial, sans-serif;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  --container-wide: 80rem;
+  --shadow-sm: 0 1px 3px rgb(38 42 48 / 7%);
+  --shadow-md: 0 8px 22px rgb(38 42 48 / 10%);
+  --shadow-xl: 0 20px 50px rgb(38 42 48 / 10%);
+  --dur-fast: 200ms;
+  --dur-base: 420ms;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-primary: #ee8493;
+  --color-on-primary: #171a1f;
+  --color-primary-hover: #f5a0ac;
+  --color-primary-soft: #35272d;
+  --color-secondary: #9dc8e8;
+  --color-surface: #171a1f;
+  --color-surface-low: #1d2026;
+  --color-surface-container: #252932;
+  --color-surface-high: #2c3038;
+  --color-surface-highest: #363b44;
+  --color-surface-raised: #20242b;
+  --color-on-surface: #f1f0ed;
+  --color-on-surface-variant: #b2b6bf;
+  --color-outline: #b2b6bf;
+  --color-outline-variant: #626873;
+  --color-error: #ff9aa6;
+  --color-focus: #9dc8e8;
+  --color-image-overlay: rgb(0 0 0 / 80%);
+  --color-control-overlay: rgb(0 0 0 / 78%);
+  --color-control-overlay-hover: rgb(0 0 0 / 92%);
+  --color-logo-surface: #ffffff;
+  --color-image-text: #ffffff;
+  --border-subtle: rgb(255 255 255 / 10%);
+  --border-section: rgb(255 255 255 / 15%);
+  --border-input: rgb(255 255 255 / 25%);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 18%);
+  --shadow-md: 0 8px 22px rgb(0 0 0 / 24%);
+  --shadow-xl: 0 20px 50px rgb(0 0 0 / 28%);
+}
+

@@ -1,14 +1,12 @@
 @if (page() === 'inicio') {
   <div class="original-home" (mouseenter)="hovering.set(true)" (mouseleave)="hovering.set(false)" (focusin)="focusWithin.set(true)" (focusout)="onCarouselFocusOut($event)">
     <section class="carousel" aria-label="Nuestras marcas" aria-roledescription="carrusel">
-      @for (item of slides; track item.image; let i = $index) {
-        @if (slide() === i) {
-          <div class="slide" role="group" aria-roledescription="diapositiva" [attr.aria-label]="(i + 1) + ' de 3: ' + item.name">
-            <img class="slide-image" [src]="'assets/img/' + item.image" [alt]="item.name" fetchpriority="high">
-            <div class="slide-caption"><h2 class="sr-only">{{ item.name }}</h2><a class="button light" [href]="item.url" target="_blank" rel="noopener noreferrer">Visitanos</a></div>
-          </div>
+      <div class="slide" role="group" aria-roledescription="diapositiva" [attr.aria-label]="(slide() + 1) + ' de 3: ' + slides[slide()].name">
+        @for (item of slides; track item.image; let i = $index) {
+          <img class="slide-image" [class.active]="slide() === i" [src]="'assets/img/' + item.image" alt="" aria-hidden="true" [attr.fetchpriority]="slide() === i ? 'high' : 'low'">
         }
-      }
+        <div class="slide-caption"><h2 class="sr-only">{{ slides[slide()].name }}</h2><a class="button light" [href]="slides[slide()].url" target="_blank" rel="noopener noreferrer">Visitanos</a></div>
+      </div>
       <button class="carousel-arrow previous" type="button" (click)="moveSlide(-1)" aria-label="Diapositiva anterior">‹</button>
       <button class="carousel-arrow next" type="button" (click)="moveSlide(1)" aria-label="Diapositiva siguiente">›</button>
     </section>

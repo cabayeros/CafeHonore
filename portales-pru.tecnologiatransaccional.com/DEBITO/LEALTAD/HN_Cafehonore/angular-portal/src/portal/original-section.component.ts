@@ -11,7 +11,7 @@ import { ORIGINAL_CONTENT } from './original-content';
         }
       </div>
     }
-    <section class="original-content" [innerHTML]="html"></section>
+    <section class="original-content" [class.about-content]="page() === 'acerca'" [class.policy-content]="page() === 'politicas'" [class.conditions-content]="page() === 'condiciones'" [innerHTML]="html"></section>
   `
 })
 export class OriginalSectionComponent {
