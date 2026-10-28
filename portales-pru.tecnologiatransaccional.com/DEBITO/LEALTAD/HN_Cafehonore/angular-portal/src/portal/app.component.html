@@ -1,0 +1,21 @@
+<a class="skip-link" href="#contenido" (click)="$event.preventDefault(); content.focus()">Saltar al contenido</a>
+<div class="topbar"><div class="shell topbar-inner"><span>.:: Café Honoré ::. | 3.1.53 |</span><a routerLink="/cuenta">Iniciar sesión</a></div></div>
+<header class="shell">
+  <div class="brand-row">
+    <a class="plus-brand" routerLink="/inicio" aria-label="+PLUS · Inicio"><img src="assets/img/LogoPlus.png" alt="+PLUS"></a>
+    <div class="partner-logos" aria-label="Nuestras marcas">
+      <a href="http://www.cafehonore.hn/" target="_blank" rel="noopener noreferrer"><img src="assets/img/sucursales/logoInicioHonore.jpg" alt="Café Honoré"></a>
+      <a href="http://marcoaldany.hn/" target="_blank" rel="noopener noreferrer"><img src="assets/img/sucursales/logoInicioAldany.jpg" alt="Marco Aldany"></a>
+      <a href="http://floreshonore.hn/" target="_blank" rel="noopener noreferrer"><img src="assets/img/sucursales/logoInicioCanastas.jpg" alt="Flores y Canastas Honoré"></a>
+    </div>
+  </div>
+  <nav class="navigation" aria-label="Navegación principal">
+    <button class="menu-toggle" type="button" (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" aria-controls="main-menu">☰ <span>Menú</span></button>
+    <div id="main-menu" class="nav-links" [class.open]="menuOpen()">
+      @for (link of links; track link[0]) { <a [routerLink]="'/' + link[0]" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="menuOpen.set(false)">{{ link[1] }}</a> }
+    </div>
+    <button type="button" class="theme-toggle" (click)="toggleTheme()" [attr.aria-pressed]="dark()" aria-label="Tema oscuro"><span aria-hidden="true">{{ dark() ? '☾' : '☀' }}</span> {{ dark() ? 'Oscuro' : 'Claro' }}</button>
+  </nav>
+</header>
+<main id="contenido" class="shell main" tabindex="-1" #content><router-outlet /></main>
+<footer class="shell footer"><div><span>© SPlus;</span></div><img src="assets/img/DATACODE.png" alt="Datacode"></footer>

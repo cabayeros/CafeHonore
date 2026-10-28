@@ -1,0 +1,155 @@
+
+
+<script>
+    function objetoAjax() {
+        var xmlhttp = false;
+        try {
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (E) {
+                xmlhttp = false;
+            }
+        }
+
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+            xmlhttp = new XMLHttpRequest();
+        }
+        return xmlhttp;
+    }
+
+    function ajaxControlado(contenido, ruta, id) {
+        ajax = objetoAjax();
+        ajax.open("POST", ruta, true);
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState === 4) {
+                id.innerHTML = ajax.responseText;
+            }
+        }
+        ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        ajax.send(contenido);
+    }
+
+    function t1() {
+        document.getElementById("row").innerHTML = "Cargando...";
+        ajaxControlado("t1=0", "display/tabsCondiciones.php", document.getElementById("row"));
+    }
+
+    function t12() {
+        document.getElementById("row").innerHTML = "Cargando...";
+        ajaxControlado("t2=0", "display/tabsCondiciones.php", document.getElementById("row"));
+    }
+    function t13() {
+        document.getElementById("row").innerHTML = "Cargando...";
+        ajaxControlado("t3=0", "display/tabsCondiciones.php", document.getElementById("row"));
+    }
+
+</script>
+
+
+<div class="panel panel-Organica newWhite">
+    <div class="panel-heading-LCM">Condiciones</div>
+    <div class="panel-body">
+        <!--        <div id="row" class="row">
+                    <img src="img/GIF_CONDICIONES.png" class="img-responsive img-thumbnail" style="background-color: #fff0;border: 0px solid #dddddd;"><br><br>
+                    <img src="img/PLUS_CONDICIONES.png" class="img-responsive img-thumbnail" style="background-color: #fff0;border: 0px solid #dddddd;"><br><br>
+                    <img src="img/tar/TIRO- Tarjeta Corporativa.jpg" class="img-responsive img-thumbnail"><br>
+                </div>-->
+        <div class="col-md-12 text-politicas">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/GIF_CONDICIONES.png" class="img-responsive img-thumbnail" style="background-color: #fff0;border: 0px solid #dddddd;"><br><br>
+                </div>
+                <div class="col-md-8">
+                    <div class="h2 h1-negro">Condiciones <b>Gift Card</b></div><br>
+                    <!--<p>Condiciones</p>-->
+                    <ul style="text-align: justify;">
+                        <li>Presentarla cada vez que desee consumir el saldo contenido en esta tarjeta, es de uso
+
+                            transferible y puede ser utilizada como tarjeta recargable. El saldo contenido en esta
+
+                            tarjeta podrá ser utilizado en Café Honoré, Flores y Canastas Honoré y Marco Aldany. No
+
+                            nos hacemos responsables por pérdida ni extravió de esta tarjeta.
+
+                            *Restricciones aplica.</li>
+                    </ul>
+                </div>
+            </div>
+        </div><br>
+        <div class="col-md-12 text-politicas">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/PLUS_CONDICIONES.png" class="img-responsive img-thumbnail" style="background-color: #fff0;border: 0px solid #dddddd;"><br><br>
+                </div>
+                <div class="col-md-8">
+                    <div class="h2 h1-negro">Condiciones <b>Plus Card</b></div><br>
+                    <p>CAF&Eacute; HONOR&Eacute;</p>
+                    <ul style="text-align: justify;">
+                        <li>Es de uso personal e intransferible. Presentarla cada vez que realice su consumo para
+
+                            acumular puntos y obtener beneficios en Café Honoré y comercios afiliados como Marco
+
+                            Aldany y Flores y Canastas Honoré. En caso de pérdida deberá presentarse en Café Honoré
+
+                            para poder hacer la reposición. Para más información visite <a href="http://www.cafehonore.hn/" target="_blank">www.cafeHonore.hn</a>
+
+                            *Restricciones aplican.</li>
+                    </ul><br>        
+                    <p>MARCO ALDANY</p>
+                    <ul style="text-align: justify;">
+                        <li>Es de uso personal e intransferible. Presentarla cada vez que realice su consumo para
+
+                            acumular puntos y obtener beneficios en Marco Aldany y comercios afiliados como Café
+
+                            Honoré y Flores y Canastas Honoré. En caso de pérdida deberá presentarse en Marco
+
+                            Aldany para poder hacer la reposición. Para más información visite <a href="http://www.marcoaldany.hn/" target="_blank"> www.marcoaldany.hn</a>
+
+                            *Restricciones aplican.</li>
+                    </ul><br>
+                    <p>FLORES Y CANASTAS HONOR&Eacute;</p>
+                    <ul style="text-align: justify;">
+                        <li>Es de uso personal e intransferible. Presentarla cada vez que realice su consumo para
+
+                            acumular puntos y obtener beneficios en Flores y Canastas Honoré y comercios afiliados
+
+                            como Café Honoré y Marco Aldany. En caso de pérdida deberá presentarse en Flores y
+
+                            Canastas Honoré para poder hacer la reposición. Para más información visite
+
+                            <a href="http://www.floreshonore.hn/" target="_blank"> www.floreshonore.hn</a>
+
+                            *Restricciones aplican.</li>
+                    </ul></div>
+            </div>
+        </div><br>
+
+        <div class="col-md-12 text-politicas">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/tar/TIRO- Tarjeta Corporativa.png" class="img-responsive img-thumbnail" style="background-color: #fff0;border: 0px solid #dddddd;"><br>
+                </div>
+                <div class="col-md-8">
+                    <div class="h2 h1-negro">Condiciones <b>Corporativa Card</b></div><br>
+                    <p>Condiciones</p>
+                    <ul style="text-align: justify;">
+                        <li>Es de uso personal e intransferible. Presentarla cada vez que realice su consumo para
+
+                            acumular puntos y obtener beneficios en Café Honoré. En caso de pérdida deberá
+
+                            presentarse en Café Honoré para poder hacer la reposición. Para más información visite
+
+                            <a href="www.cafehonore.hn" target="_blank">www.cafehonore.hn</a>
+
+                            *Restricciones aplican.</li>
+                    </ul></div>
+            </div>
+        </div><br>
+
+
+    </div>
+</div>
+</div>
+  

@@ -1,0 +1,231 @@
+/* 
+    Document   : menu
+    Created on : 05-02-2013, 08:50:28 AM
+    Author     : JVentura
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*@import url(http://fonts.googleapis.com/css?family=Nunito);
+@import url(http://thecodeplayer.com/uploads/fonts/fontawesome/css/font-awesome.min.css);*/
+/* menu styles */
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../fonts/SourceSansPro-Regular.otf);
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: SourceSansPro;
+}
+body {    
+    /* background-image: url(../../img/background4.jpg) ;    */
+    background-repeat: no-repeat;
+    /*margin-top: -20px;*/
+    background-position: center top;
+    background-color: #FFF;
+    background-size: 100%;
+    font-family: SourceSansPro;
+    font-weight: bold;
+    font-size: 15px;
+    color: #666;
+}
+#logo {
+    background: url(../../img/logo.png) no-repeat;
+    top: 21px;
+    height: 100px;
+    display: block;        
+    background-size: contain;    
+}
+.menu-normal{
+    position: static;
+}
+.pie{
+    border-top: 1px solid #e5e5e5;
+    margin-top: 10px;
+}
+/*PARA MENU*/
+/*custom font for text*/
+/*CSS file for fontawesome - an iconfont we will be using. This CSS file imported conDDtains the font-face declaration. More info: http://fortawesome.github.io/Font-Awesome/ */
+/*Basic reset*/
+#accordian * {margin: 0; padding: 0;}
+#accordian {
+    background: #195284;
+    width: 250px;
+    color: white;
+    /*Some cool shadow and glow effect*/
+    box-shadow: 
+        0 5px 15px 1px rgba(0, 0, 0, 0.6), 
+        0 0 200px 1px rgba(255, 255, 255, 0.5);
+    height: 530px;
+}
+/*heading styles*/
+#accordian h3 {
+    font-size: 12px;
+    line-height: 34px;
+    padding: 0 10px;
+    cursor: pointer;
+    /*fallback for browsers not supporting gradients*/
+    background: black; 
+    background: linear-gradient(black, #002535);
+    /*amarillo*/
+    color: #FFFFFF; 
+}
+/*heading hover effect*/
+#accordian h3:hover {
+    text-shadow: 0 0 1px #003366;
+}
+/*iconfont styles*/
+#accordian h3 span {
+    font-size: 16px;
+    margin-right: 10px;
+}
+/*list items*/
+#accordian li {
+    list-style-type: none;
+    border-bottom-style: solid;
+    border-color: white;
+}
+/*links*/
+#accordian ul ul li a {	
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 27px;
+    display: block;
+    padding: 0 15px;
+    /*transition for smooth hover animation*/
+    transition: all 0.15s;
+    height: 50px;    
+    color: white;
+    font-family: SourceSansPro;   
+}
+/*hover effect on links*/
+#accordian ul ul li a:hover {
+    /*azul logo*/
+    background: #4F8DC5 ;
+    border-left: 5px solid black;
+    /*amarillo como logo*/
+    color: white;
+}
+/*Lets hide the non active LIs by default*/
+#accordian ul ul {
+    display: none;
+}
+#accordian li.active ul {
+    display: block;
+}
+.panel-Organica{
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);       
+}
+.panel-heading-LCM {
+    color: #FFF;
+    background-color: #c73245;
+    border-color: #E3F0F9;
+    padding: 10px 15px;
+}
+/*Div de puntos en mi cuenta*/
+#primeroT{
+    font-family: SourceSansPro;
+    width: 17%;
+    height: 12%;
+    float: right;
+    background: #0DB8C0;
+    border-radius: 15%;
+    color: white;
+    font-size: 20px;
+    -webkit-box-shadow: 5px 5px 5px #cccccc;
+    filter: shadow(color=#cccccc, direction=135, strength=2);
+    -moz-box-shadow: 5px 5px 5px #cccccc;
+    text-align: center;
+}/*fin puntos*/
+/*para nombre de usuario en mi cuenta*/
+
+#puntos{
+    margin-bottom: 20px;
+}
+#Nombre{    
+    font-size: 22px;
+    max-width: 450px;
+    color: white;
+    box-shadow: 5px 5px 5px #252323;
+    background: #0DB8C0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 11px;
+    margin-top: -28px;
+    text-decoration: none;
+    padding-left: 16px;
+    /*    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15', MakeShadow='true', ShadowOpacity='0.40');
+        filter:progid:DXImageTransform.Microsoft.DropShadow(color='#000000',offX='20',offY='20');
+        -ms-filter: "progid:DXImageTransform.Microsoft.DropShadow(color='#000000',offX='20',offY='20')";IE8 
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='15', MakeShadow='true', ShadowOpacity='0.40')";*/
+}
+#Nombre a{
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+#Nombre a:hover {   
+    color: white;
+    transition: 0.5s ease;
+    text-decoration: none;
+    /*box-shadow: 0 0 30px 0px #999;*/
+}
+* html #Nombre {
+    margin-bottom: 10px;
+    font-size: 22px;
+    width: 400px;
+    max-width: 400px;
+    color:white;
+    box-shadow: 5px 5px 5px #cccccc;
+    background: #00543d;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color='#000000',direction='120',strength='12');
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color='#000000',direction='120',strength='20')"; 
+    /*    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15', MakeShadow='true', ShadowOpacity='0.40');
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='15', MakeShadow='true', ShadowOpacity='0.40')";*/
+}/*fin de estilos para nombre de cuenta*/
+
+.panel-min{
+    /*min-width: 600px;*/
+}
+
+.conteneor12_12{
+    /*background: #BFD7D9 url(../../img/background.jpg) no-repeat;*/       
+    background-size: 100%;
+}
+.topRight1{
+    background: #d1283d ;
+    color: white;
+    font-family: SourceSansPro;   
+}
+.topRight1 a{
+    color: whitesmoke;
+}
+
+.navOrganica{
+    background: none;
+    border-color: #D1293E;
+}
+
+.navbar a{
+    font-family: SourceSansPro;   
+}
+#menudiv a{
+    color: #034D8D; 
+}
+
+.active > a{
+    color: #fff !important;
+}
+
+#menudiv a:hover,a:focus{
+    color: #951D2C; 
+}
+.icon-bar{
+    color: red;
+}
+
+.text-muted {
+    color: #f5f5f5;
+}
+
