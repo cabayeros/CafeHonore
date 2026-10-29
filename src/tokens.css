@@ -1,0 +1,43 @@
+:root {
+  color-scheme: light;
+  /* Design tokens: Marca +PLUS y escalera cálida de superficies. */
+  --color-primary: #b82940;
+  --color-on-primary: #ffffff;
+  --color-primary-hover: #982035;
+  --color-primary-soft: #f4e8e8;
+  --color-secondary: #16466b;
+  --color-surface: #f7f6f3;
+  --color-surface-low: #f1efec;
+  --color-surface-container: #ebe8e4;
+  --color-surface-high: #e5e2de;
+  --color-surface-highest: #dcd9d5;
+  --color-surface-raised: #ffffff;
+  --color-on-surface: #262a30;
+  --color-on-surface-variant: #686d75;
+  --color-outline: #686d75;
+  --color-outline-variant: #c5c4c1;
+  --color-error: #a51f35;
+  --color-focus: #16466b;
+  --color-image-overlay: rgb(0 0 0 / 80%);
+  --color-control-overlay: rgb(23 26 31 / 78%);
+  --color-control-overlay-hover: rgb(23 26 31 / 92%);
+  --color-logo-surface: #ffffff;
+  --color-image-text: #ffffff;
+  --border-subtle: color-mix(in srgb, var(--color-outline-variant) 20%, transparent);
+  --border-section: color-mix(in srgb, var(--color-outline-variant) 30%, transparent);
+  --border-input: color-mix(in srgb, var(--color-outline-variant) 50%, transparent);
+  --font-sans: 'Segoe UI', Arial, sans-serif;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  --container-wide: 80rem;
+  --shadow-sm: 0 1px 3px rgb(38 42 48 / 7%);
+  --shadow-md: 0 8px 22px rgb(38 42 48 / 10%);
+  --shadow-xl: 0 20px 50px rgb(38 42 48 / 10%);
+  --dur-fast: 200ms;
+  --dur-base: 420ms;
+}
+
+
